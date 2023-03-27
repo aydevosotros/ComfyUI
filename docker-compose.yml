@@ -1,0 +1,11 @@
+services:
+  comfy_ui:
+    build:
+      context: .
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
